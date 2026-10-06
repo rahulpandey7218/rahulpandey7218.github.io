@@ -280,7 +280,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+   <!-- Contact Section with Web-Browser Email Fix -->
     <section id="contact" class="py-32 px-4 text-center max-w-3xl mx-auto relative">
         <div class="absolute inset-0 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
         <div class="relative z-10">
@@ -289,14 +289,18 @@
                 I am currently accepting new freelance clients. Drop me an email detailing your project requirements, and I will get back to you within 24 hours.
             </p>
             
-            <div class="flex flex-col items-center gap-6">
-                <!-- IMPORTANT: Change the email in the line below -->
-                <a href="mailto:your.email@gmail.com" class="px-8 py-4 bg-primary text-white rounded font-mono font-semibold hover:bg-blue-600 transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)] flex items-center justify-center">
-                    <i class="fas fa-envelope mr-2"></i> Open Email App
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                
+                <!-- Web Gmail Compose Link (No Desktop App Required) -->
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pandeyrahul7218@gmail.com" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 bg-primary text-white rounded font-mono font-semibold hover:bg-blue-600 transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)] flex items-center justify-center">
+                    <i class="fab fa-google mr-2"></i> Open in Gmail
                 </a>
                 
-                <!-- IMPORTANT: Change the email in the line below as well -->
-                <p class="text-slate-400 font-mono text-sm">Or email me directly at: <br class="md:hidden mt-2"><span class="text-white selection:bg-primary ml-2 bg-slate-800 px-3 py-1.5 rounded border border-slate-700">pandeyrahul7218@gmail.com</span></p>
+                <!-- Instant Copy Button -->
+                <button onclick="copyToClipboard('pandeyrahul7218@gmail.com')" id="copyBtn" class="w-full sm:w-auto px-8 py-4 bg-transparent border border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 rounded font-mono font-semibold transition-all flex items-center justify-center cursor-pointer">
+                    <i class="fas fa-copy mr-2" id="copyIcon"></i> <span id="copyText">Copy Email Address</span>
+                </button>
+
             </div>
         </div>
     </section>
@@ -313,5 +317,24 @@
         </p>
     </footer>
 
+    <!-- Script for the Copy Button to work -->
+    <script>
+        function copyToClipboard(emailText) {
+            navigator.clipboard.writeText(emailText).then(() => {
+                const copyText = document.getElementById('copyText');
+                const copyIcon = document.getElementById('copyIcon');
+                
+                copyText.innerText = 'Copied Successfully!';
+                copyIcon.className = 'fas fa-check mr-2 text-emerald-400';
+                
+                setTimeout(() => {
+                    copyText.innerText = 'Copy Email Address';
+                    copyIcon.className = 'fas fa-copy mr-2 text-slate-300';
+                }, 3000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
 </body>
 </html>
