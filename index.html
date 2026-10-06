@@ -280,61 +280,48 @@
         </div>
     </section>
 
-   <!-- Contact Section with Web-Browser Email Fix -->
-    <section id="contact" class="py-32 px-4 text-center max-w-3xl mx-auto relative">
+  <!-- Contact Section with Embedded Form -->
+    <section id="contact" class="py-32 px-4 max-w-4xl mx-auto relative">
         <div class="absolute inset-0 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
-        <div class="relative z-10">
-            <h2 class="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">Ready to scale?</h2>
-            <p class="text-slate-400 mb-10 text-lg leading-relaxed">
-                I am currently accepting new freelance clients. Drop me an email detailing your project requirements, and I will get back to you within 24 hours.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                
-                <!-- Web Gmail Compose Link (No Desktop App Required) -->
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pandeyrahul7218@gmail.com" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 bg-primary text-white rounded font-mono font-semibold hover:bg-blue-600 transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)] flex items-center justify-center">
-                    <i class="fab fa-google mr-2"></i> Open in Gmail
-                </a>
-                
-                <!-- Instant Copy Button -->
-                <button onclick="copyToClipboard('pandeyrahul7218@gmail.com')" id="copyBtn" class="w-full sm:w-auto px-8 py-4 bg-transparent border border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 rounded font-mono font-semibold transition-all flex items-center justify-center cursor-pointer">
-                    <i class="fas fa-copy mr-2" id="copyIcon"></i> <span id="copyText">Copy Email Address</span>
-                </button>
-
+        <div class="relative z-10 glass-card rounded-2xl p-8 md:p-12 shadow-2xl">
+            <div class="text-center mb-10">
+                <h2 class="text-sm font-mono text-primary mb-3 uppercase tracking-widest">03. What's Next?</h2>
+                <h3 class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">Let's Build Together</h3>
+                <p class="text-slate-400 text-lg leading-relaxed">
+                    Send me a message directly from here. It goes straight to my inbox, and I will reply within 24 hours.
+                </p>
             </div>
+            
+            <!-- The FormSubmit Action URL already contains your email -->
+            <form action="https://formsubmit.co/pandeyrahul7218@gmail.com" method="POST" class="space-y-6">
+                
+                <!-- Hidden Configurations for the API -->
+                <input type="hidden" name="_next" value="https://rahulpandey7218.github.io">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New Freelance Project Inquiry!">
+                <input type="hidden" name="_template" value="table">
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-sm font-mono text-slate-400 mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" required class="w-full bg-dark/50 border border-slate-700 rounded px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-mono text-slate-400 mb-2">Your Email</label>
+                        <input type="email" id="email" name="email" required class="w-full bg-dark/50 border border-slate-700 rounded px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="john@company.com">
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="message" class="block text-sm font-mono text-slate-400 mb-2">Project Details</label>
+                    <textarea id="message" name="message" rows="5" required class="w-full bg-dark/50 border border-slate-700 rounded px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors resize-none" placeholder="Tell me about your requirements or idea..."></textarea>
+                </div>
+                
+                <div class="text-center pt-4">
+                    <button type="submit" class="w-full md:w-auto px-10 py-4 bg-primary text-white rounded font-mono font-semibold hover:bg-blue-600 transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] flex items-center justify-center mx-auto cursor-pointer">
+                        <i class="fas fa-paper-plane mr-2"></i> Send Message
+                    </button>
+                </div>
+            </form>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="py-8 text-center border-t border-slate-800/50 bg-dark mt-12">
-        <div class="flex justify-center gap-6 mb-4">
-            <a href="https://github.com/rahulpandey7218" target="_blank" class="text-slate-400 hover:text-white transition-colors text-xl"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/" target="_blank" class="text-slate-400 hover:text-white transition-colors text-xl"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-        <p class="font-mono text-sm text-slate-600">
-            &copy; 2026 Rahul Pandey. All rights reserved. <br>
-            Available for remote opportunities worldwide.
-        </p>
-    </footer>
-
-    <!-- Script for the Copy Button to work -->
-    <script>
-        function copyToClipboard(emailText) {
-            navigator.clipboard.writeText(emailText).then(() => {
-                const copyText = document.getElementById('copyText');
-                const copyIcon = document.getElementById('copyIcon');
-                
-                copyText.innerText = 'Copied Successfully!';
-                copyIcon.className = 'fas fa-check mr-2 text-emerald-400';
-                
-                setTimeout(() => {
-                    copyText.innerText = 'Copy Email Address';
-                    copyIcon.className = 'fas fa-copy mr-2 text-slate-300';
-                }, 3000);
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
-            });
-        }
-    </script>
-</body>
-</html>
