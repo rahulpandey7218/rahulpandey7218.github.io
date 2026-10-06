@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahul Pandey | Freelance Full Stack Developer</title>
+    <title>Rahul Pandey | Freelance Software & AI Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script>
@@ -11,8 +11,8 @@
             theme: {
                 extend: {
                     colors: {
-                        dark: '#0a0f1c',
-                        card: '#111827',
+                        dark: '#050b14',
+                        card: '#0f172a',
                         primary: '#3b82f6',
                         accent: '#60a5fa',
                     }
@@ -22,27 +22,35 @@
     </script>
     <style>
         .glass-card {
-            background: rgba(17, 24, 39, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(59, 130, 246, 0.15);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+        /* Hide scrollbar for the marquee but keep functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
     </style>
 </head>
 <body class="bg-dark text-slate-300 font-sans antialiased selection:bg-primary selection:text-white">
 
     <!-- Navigation -->
-    <nav class="fixed w-full bg-dark/80 backdrop-blur-md border-b border-slate-800 z-50">
+    <nav class="fixed w-full bg-dark/90 backdrop-blur-md border-b border-slate-800/50 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <span class="text-primary font-mono font-bold text-2xl tracking-tighter">&lt;Rahul.dev /&gt;</span>
+                <span class="text-white font-mono font-bold text-2xl tracking-tighter">Rahul<span class="text-primary">.dev</span></span>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-center space-x-8 font-mono text-sm">
-                        <a href="#about" class="hover:text-accent transition-colors">01. About</a>
-                        <a href="#experience" class="hover:text-accent transition-colors">02. Experience</a>
-                        <a href="#projects" class="hover:text-accent transition-colors">03. Work</a>
+                        <a href="#services" class="hover:text-primary transition-colors">01. Services</a>
+                        <a href="#projects" class="hover:text-primary transition-colors">02. Work</a>
+                        <a href="#experience" class="hover:text-primary transition-colors">03. Experience</a>
                         <a href="https://github.com/rahulpandey7218" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
-                        <a href="#contact" class="px-5 py-2.5 bg-primary/10 border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(59,130,246,0.3)]">Hire Me</a>
+                        <a href="#contact" class="px-5 py-2.5 bg-primary/10 border border-primary text-primary rounded hover:bg-primary hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(59,130,246,0.2)]">Start a Project</a>
                     </div>
                 </div>
             </div>
@@ -50,112 +58,110 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="about" class="min-h-screen flex items-center pt-20 px-4 md:px-20 max-w-7xl mx-auto relative overflow-hidden">
-        <div class="absolute top-1/4 -right-20 w-96 h-96 bg-primary/20 rounded-full blur-[120px] pointer-events-none"></div>
-        <div class="absolute bottom-1/4 -left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+    <section class="min-h-screen flex flex-col justify-center pt-20 px-4 md:px-20 max-w-7xl mx-auto relative overflow-hidden">
+        <div class="absolute top-1/4 -right-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-1/4 -left-20 w-72 h-72 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none"></div>
 
-        <div class="max-w-4xl relative z-10">
-            <p class="text-primary font-mono mb-5 text-lg tracking-wide">Hi, I am</p>
-            <h1 class="text-6xl md:text-8xl font-extrabold text-white mb-4 tracking-tight">Rahul Pandey.</h1>
-            <h2 class="text-4xl md:text-6xl font-bold text-slate-400 mb-8 tracking-tight">I engineer scalable digital solutions.</h2>
-            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-12 leading-relaxed">
-                I am a Full Stack Developer specializing in building high-performance web applications, intelligent automation systems, and secure database architectures. I help businesses transform complex logic into seamless digital products.
+        <div class="max-w-4xl relative z-10 mt-10">
+            <div class="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary font-mono text-sm mb-6">
+                <span class="relative flex h-2 w-2 inline-block mr-2 -mt-0.5">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                </span>
+                Available for Freelance Work
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+                I build digital solutions that <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-400">scale businesses.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-10 leading-relaxed">
+                Hi, I am Rahul. I partner with founders and agencies to engineer custom web applications, integrate AI automation, and design bulletproof databases. 
             </p>
             <div class="flex flex-wrap gap-5">
-                <a href="#contact" class="px-8 py-4 bg-primary text-white rounded-md font-mono font-semibold hover:bg-blue-600 transition-colors shadow-[0_0_20px_rgba(59,130,246,0.4)]">
-                    Start a Project
+                <a href="#contact" class="px-8 py-4 bg-primary text-white rounded font-mono font-semibold hover:bg-blue-600 transition-colors shadow-[0_0_20px_rgba(59,130,246,0.4)]">
+                    Book a Free Consultation
                 </a>
-                <a href="https://github.com/rahulpandey7218" target="_blank" class="px-8 py-4 bg-card border border-slate-700 text-slate-200 hover:border-slate-500 rounded-md transition-all flex items-center gap-3">
-                    <i class="fab fa-github text-xl"></i> View GitHub
+                <a href="#projects" class="px-8 py-4 bg-transparent border border-slate-700 text-slate-300 hover:border-slate-500 hover:text-white rounded font-mono transition-all">
+                    View Portfolio
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Capabilities & Experience Section -->
-    <section id="experience" class="py-32 px-4 md:px-20 max-w-7xl mx-auto">
-        <div class="flex items-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-white"><span class="text-primary font-mono text-2xl mr-3">02.</span> Professional Expertise</h2>
-            <div class="h-px bg-slate-800 flex-grow ml-8 max-w-md"></div>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-12">
-            <div>
-                <h3 class="text-xl font-semibold text-slate-200 mb-6 font-mono">Core Technologies</h3>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="glass-card p-4 rounded-lg flex items-center gap-4">
-                        <i class="fab fa-react text-2xl text-cyan-400"></i>
-                        <span class="font-medium text-slate-200">React.js & UI</span>
-                    </div>
-                    <div class="glass-card p-4 rounded-lg flex items-center gap-4">
-                        <i class="fab fa-python text-2xl text-blue-400"></i>
-                        <span class="font-medium text-slate-200">Python & C++</span>
-                    </div>
-                    <div class="glass-card p-4 rounded-lg flex items-center gap-4">
-                        <i class="fab fa-node-js text-2xl text-green-500"></i>
-                        <span class="font-medium text-slate-200">Node.js Backends</span>
-                    </div>
-                    <div class="glass-card p-4 rounded-lg flex items-center gap-4">
-                        <i class="fas fa-database text-2xl text-orange-400"></i>
-                        <span class="font-medium text-slate-200">SQL & PostgreSQL</span>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <h3 class="text-xl font-semibold text-slate-200 mb-6 font-mono">Track Record</h3>
-                <div class="space-y-6">
-                    <div class="border-l-2 border-primary pl-6 py-1">
-                        <h4 class="text-lg font-bold text-slate-100">AI Fellowship & Analysis</h4>
-                        <p class="text-sm text-slate-400 font-mono mt-1 mb-2">Handshake AI • Bluestock Fintech</p>
-                        <p class="text-slate-400 text-sm leading-relaxed">Engineered AI prompts and retrieved complex search datasets. Executed remote data analytics and processing pipelines.</p>
-                    </div>
-                    <div class="border-l-2 border-slate-700 pl-6 py-1 hover:border-primary transition-colors">
-                        <h4 class="text-lg font-bold text-slate-100">Elite Hackathon Challenger</h4>
-                        <p class="text-sm text-slate-400 font-mono mt-1 mb-2">Goldman Sachs • ET AI Hackathon • SAP Hackfest</p>
-                        <p class="text-slate-400 text-sm leading-relaxed">Consistently shortlisted and qualified for rigorous algorithmic, system design, and AI-build sprints against top national talent.</p>
-                    </div>
-                </div>
+    <!-- Trust Banner Section -->
+    <section class="border-y border-slate-800/50 bg-card/30 py-8">
+        <div class="max-w-7xl mx-auto px-4 overflow-hidden">
+            <p class="text-center text-sm font-mono text-slate-500 mb-6 uppercase tracking-widest">Recognized & Challenged By Industry Leaders</p>
+            <div class="flex justify-center flex-wrap gap-8 md:gap-16 opacity-70 grayscale">
+                <h3 class="text-xl md:text-2xl font-bold text-slate-400 font-sans tracking-tight">GOLDMAN SACHS</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-slate-400 font-sans tracking-tight">RAZORPAY</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-slate-400 font-sans tracking-tight">SAP</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-slate-400 font-sans tracking-tight">ECONOMIC TIMES</h3>
             </div>
         </div>
     </section>
 
-    <!-- NEW INTERACTIVE IMAGE HOVER PROJECTS SECTION -->
-    <section id="projects" class="py-32 px-4 md:px-20 max-w-7xl mx-auto">
+    <!-- Services Section -->
+    <section id="services" class="py-32 px-4 md:px-20 max-w-7xl mx-auto">
+        <div class="text-center mb-20">
+            <h2 class="text-sm font-mono text-primary mb-3 uppercase tracking-widest">01. What I Do</h2>
+            <h3 class="text-3xl md:text-5xl font-bold text-white">Services Tailored for Growth</h3>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass-card p-8 rounded-xl hover:-translate-y-2 transition-transform duration-300">
+                <i class="fab fa-react text-4xl text-primary mb-6"></i>
+                <h4 class="text-xl font-bold text-white mb-4">Custom Web Applications</h4>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    From landing pages to complex SaaS dashboards. I build fast, responsive, and SEO-friendly web apps using modern frameworks like React and Node.js.
+                </p>
+            </div>
+            <div class="glass-card p-8 rounded-xl border-primary/30 hover:-translate-y-2 transition-transform duration-300 relative">
+                <div class="absolute -top-3 -right-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">High Demand</div>
+                <i class="fas fa-robot text-4xl text-purple-400 mb-6"></i>
+                <h4 class="text-xl font-bold text-white mb-4">AI & Automation Integration</h4>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    Save hours of manual work. I integrate powerful AI models (like Gemini) into your business workflows, build smart chatbots, and automate repetitive tasks using Python.
+                </p>
+            </div>
+            <div class="glass-card p-8 rounded-xl hover:-translate-y-2 transition-transform duration-300">
+                <i class="fas fa-database text-4xl text-emerald-400 mb-6"></i>
+                <h4 class="text-xl font-bold text-white mb-4">Database Architecture</h4>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    Data is the core of your business. I design secure, optimized, and highly scalable database systems (MySQL/PostgreSQL) that run flawlessly under heavy load.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Projects Section -->
+    <section id="projects" class="py-20 px-4 md:px-20 max-w-7xl mx-auto">
         <div class="flex items-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-white"><span class="text-primary font-mono text-2xl mr-3">03.</span> Featured Work</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-white"><span class="text-primary font-mono text-2xl mr-3">02.</span> Featured Case Studies</h2>
             <div class="h-px bg-slate-800 flex-grow ml-8 max-w-md"></div>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-            
+        <div class="grid md:grid-cols-2 gap-10">
             <!-- Project 1 -->
-            <div class="relative overflow-hidden rounded-xl group h-80 border border-slate-700 bg-card cursor-pointer shadow-lg">
-                <!-- Background Image -->
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Code" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50 group-hover:opacity-10 z-0">
-                <!-- Gradient Overlay -->
-                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/70 to-transparent z-10 transition-colors duration-500 group-hover:from-dark group-hover:via-dark/95"></div>
+            <div class="relative overflow-hidden rounded-xl group h-96 border border-slate-700 bg-card cursor-pointer shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Code" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-40 group-hover:opacity-10 z-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-transparent z-10 transition-colors duration-500 group-hover:from-dark group-hover:via-dark/95"></div>
 
                 <div class="absolute inset-0 p-8 flex flex-col justify-end z-20 overflow-hidden">
-                    <!-- Title (Translates up on hover) -->
-                    <div class="transform translate-y-24 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                    <div class="transform translate-y-32 group-hover:translate-y-0 transition-transform duration-500 ease-out">
                         <div class="flex items-center gap-3 mb-2">
-                            <i class="fas fa-database text-primary text-2xl"></i>
                             <h3 class="text-3xl font-bold text-white">Gen AI DB Copilot</h3>
                         </div>
 
-                        <!-- Description & Tech Stack (Fades in on hover) -->
                         <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 mt-4">
                             <p class="text-slate-300 mb-6 text-sm leading-relaxed">
-                                A full-stack business tool that seamlessly translates natural language into highly optimized SQL queries. Features built-in query security checks and real-time database execution architecture.
+                                A specialized business tool that translates natural language into optimized SQL queries instantly. Built to bridge the gap between non-technical staff and complex databases securely.
                             </p>
                             <div class="flex justify-between items-center border-t border-slate-700/50 pt-4">
-                                <ul class="flex flex-wrap gap-2 font-mono text-xs text-primary/90">
-                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">React.js</li>
-                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">MySQL</li>
-                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">Gemini AI</li>
+                                <ul class="flex flex-wrap gap-2 font-mono text-xs text-primary">
+                                    <li class="bg-primary/10 px-2 py-1 rounded border border-primary/20">React.js</li>
+                                    <li class="bg-primary/10 px-2 py-1 rounded border border-primary/20">Gemini AI</li>
                                 </ul>
-                                <a href="https://github.com/rahulpandey7218" target="_blank" class="text-slate-400 hover:text-white transition-colors ml-4"><i class="fab fa-github text-2xl"></i></a>
+                                <a href="https://github.com/rahulpandey7218" target="_blank" class="text-white hover:text-primary transition-colors flex items-center gap-2 text-sm font-mono">View Code <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -163,92 +169,64 @@
             </div>
 
             <!-- Project 2 -->
-            <div class="relative overflow-hidden rounded-xl group h-80 border border-slate-700 bg-card cursor-pointer shadow-lg">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Analytics Dashboard" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50 group-hover:opacity-10 z-0">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/70 to-transparent z-10 transition-colors duration-500 group-hover:from-dark group-hover:via-dark/95"></div>
+            <div class="relative overflow-hidden rounded-xl group h-96 border border-slate-700 bg-card cursor-pointer shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Analytics Dashboard" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-40 group-hover:opacity-10 z-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-transparent z-10 transition-colors duration-500 group-hover:from-dark group-hover:via-dark/95"></div>
 
                 <div class="absolute inset-0 p-8 flex flex-col justify-end z-20 overflow-hidden">
-                    <div class="transform translate-y-24 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                    <div class="transform translate-y-32 group-hover:translate-y-0 transition-transform duration-500 ease-out">
                         <div class="flex items-center gap-3 mb-2">
-                            <i class="fas fa-shield-alt text-primary text-2xl"></i>
                             <h3 class="text-3xl font-bold text-white">AI Risk Manager</h3>
                         </div>
 
                         <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 mt-4">
                             <p class="text-slate-300 mb-6 text-sm leading-relaxed">
-                                Developed for the Razorpay AI Builder challenge. Implements real-time transaction risk scoring pipelines, interactive analytics dashboards, and complex 3DS verification logic.
+                                Developed for the Razorpay challenge. A robust backend pipeline that implements real-time transaction risk scoring and interactive analytics dashboards.
                             </p>
                             <div class="flex justify-between items-center border-t border-slate-700/50 pt-4">
-                                <ul class="flex flex-wrap gap-2 font-mono text-xs text-primary/90">
-                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">Python</li>
-                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">Analytics</li>
-                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">API Design</li>
+                                <ul class="flex flex-wrap gap-2 font-mono text-xs text-primary">
+                                    <li class="bg-primary/10 px-2 py-1 rounded border border-primary/20">Python</li>
+                                    <li class="bg-primary/10 px-2 py-1 rounded border border-primary/20">Data Analytics</li>
                                 </ul>
-                                <a href="https://github.com/rahulpandey7218" target="_blank" class="text-slate-400 hover:text-white transition-colors ml-4"><i class="fab fa-github text-2xl"></i></a>
+                                <a href="https://github.com/rahulpandey7218" target="_blank" class="text-white hover:text-primary transition-colors flex items-center gap-2 text-sm font-mono">View Code <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Project 3 -->
-            <div class="relative overflow-hidden rounded-xl group h-80 border border-slate-700 bg-card cursor-pointer shadow-lg">
-                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cybersecurity" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50 group-hover:opacity-10 z-0">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/70 to-transparent z-10 transition-colors duration-500 group-hover:from-dark group-hover:via-dark/95"></div>
-
-                <div class="absolute inset-0 p-8 flex flex-col justify-end z-20 overflow-hidden">
-                    <div class="transform translate-y-24 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                        <div class="flex items-center gap-3 mb-2">
-                            <i class="fas fa-search-dollar text-primary text-2xl"></i>
-                            <h3 class="text-3xl font-bold text-white">Fraud Management</h3>
-                        </div>
-
-                        <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 mt-4">
-                            <p class="text-slate-300 mb-6 text-sm leading-relaxed">
-                                A robust backend infrastructure featuring a custom rule-based alert engine and automated transaction screening. Built on heavily optimized, normalized relational schemas.
-                            </p>
-                            <div class="flex justify-between items-center border-t border-slate-700/50 pt-4">
-                                <ul class="flex flex-wrap gap-2 font-mono text-xs text-primary/90">
-                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">Python</li>
-                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">MySQL</li>
-                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">Schema</li>
-                                </ul>
-                                <a href="https://github.com/rahulpandey7218" target="_blank" class="text-slate-400 hover:text-white transition-colors ml-4"><i class="fab fa-github text-2xl"></i></a>
-                            </div>
-                        </div>
+    <!-- Experience / Background -->
+    <section id="experience" class="py-20 px-4 md:px-20 max-w-7xl mx-auto">
+        <div class="glass-card rounded-2xl p-8 md:p-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-8">Professional Background</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div>
+                    <h3 class="text-lg font-mono text-primary mb-4">Technical Prowess</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        My expertise lies in connecting robust backend logic with seamless frontend user experiences. I specialize in C++, Python, React.js, Node.js, and complex relational databases.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm">Full-Stack Development</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm">API Architecture</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded text-sm">Prompt Engineering</span>
                     </div>
                 </div>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="relative overflow-hidden rounded-xl group h-80 border border-slate-700 bg-card cursor-pointer shadow-lg">
-                <img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Chess AI" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50 group-hover:opacity-10 z-0">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/70 to-transparent z-10 transition-colors duration-500 group-hover:from-dark group-hover:via-dark/95"></div>
-
-                <div class="absolute inset-0 p-8 flex flex-col justify-end z-20 overflow-hidden">
-                    <div class="transform translate-y-24 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                        <div class="flex items-center gap-3 mb-2">
-                            <i class="fas fa-chess-board text-primary text-2xl"></i>
-                            <h3 class="text-3xl font-bold text-white">AI Checkers Engine</h3>
-                        </div>
-
-                        <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 mt-4">
-                            <p class="text-slate-300 mb-6 text-sm leading-relaxed">
-                                Engineered an advanced decision-making engine using Monte Carlo simulation algorithms to calculate real-time win probabilities across multiple difficulties.
-                            </p>
-                            <div class="flex justify-between items-center border-t border-slate-700/50 pt-4">
-                                <ul class="flex flex-wrap gap-2 font-mono text-xs text-primary/90">
-                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">Python</li>
-                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">Pygame</li>
-                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">Monte Carlo</li>
-                                </ul>
-                                <a href="https://github.com/rahulpandey7218" target="_blank" class="text-slate-400 hover:text-white transition-colors ml-4"><i class="fab fa-github text-2xl"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="border-l border-slate-700 pl-6">
+                    <h3 class="text-lg font-mono text-primary mb-4">Industry Experience</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <p class="text-white font-semibold">AI Fellow <span class="text-slate-500 font-normal text-sm ml-2">Handshake AI</span></p>
+                            <p class="text-slate-400 text-sm mt-1">Engineered complex AI prompts and datasets.</p>
+                        </li>
+                        <li>
+                            <p class="text-white font-semibold">Data Analyst Intern <span class="text-slate-500 font-normal text-sm ml-2">Bluestock Fintech</span></p>
+                            <p class="text-slate-400 text-sm mt-1">Executed remote data processing and analytics pipelines.</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -256,26 +234,28 @@
     <section id="contact" class="py-32 px-4 text-center max-w-3xl mx-auto relative">
         <div class="absolute inset-0 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
         <div class="relative z-10">
-            <p class="text-primary font-mono mb-4 text-lg">04. What's Next?</p>
-            <h2 class="text-5xl md:text-6xl font-bold text-white mb-8 tracking-tight">Let's Build Together</h2>
-            <p class="text-slate-400 mb-12 text-lg md:text-xl leading-relaxed">
-                I am actively taking on freelance web development, database design, and automation projects. Whether you need a full-stack application built from scratch or a script to automate your business, my inbox is open.
+            <h2 class="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">Ready to scale?</h2>
+            <p class="text-slate-400 mb-10 text-lg leading-relaxed">
+                I am currently accepting new freelance clients. Drop me an email detailing your project requirements, and I will get back to you within 24 hours.
             </p>
             
-            <a href="mailto:your.professional.email@gmail.com" class="px-10 py-5 bg-primary/10 border border-primary text-primary hover:bg-primary hover:text-white rounded-md font-mono text-lg transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] inline-block">
-                Send me an Email
-            </a>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="mailto:your.professional.email@gmail.com" class="px-8 py-4 bg-primary text-white rounded font-mono font-semibold hover:bg-blue-600 transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+                    <i class="fas fa-envelope mr-2"></i> Email Me Directly
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 text-center border-t border-slate-800 bg-dark mt-12">
+    <footer class="py-8 text-center border-t border-slate-800/50 bg-dark mt-12">
         <div class="flex justify-center gap-6 mb-4">
-            <a href="https://github.com/rahulpandey7218" target="_blank" class="text-slate-400 hover:text-primary transition-colors text-xl"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/rahulpandey7218" target="_blank" class="text-slate-400 hover:text-white transition-colors text-xl"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/" target="_blank" class="text-slate-400 hover:text-white transition-colors text-xl"><i class="fab fa-linkedin-in"></i></a>
         </div>
-        <p class="font-mono text-sm text-slate-500">
-            Designed & Built by Rahul Pandey <br>
-            B.Tech CSE '27
+        <p class="font-mono text-sm text-slate-600">
+            &copy; 2026 Rahul Pandey. All rights reserved. <br>
+            Available for remote opportunities worldwide.
         </p>
     </footer>
 
