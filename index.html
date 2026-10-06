@@ -3,425 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahul Pandey | Freelance Full Stack & AI Developer</title>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
+    <title>Rahul Pandey | Freelance Full Stack Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
                     colors: {
-                        background: '#050505',
-                        surface: '#121212',
-                        surface_hover: '#1a1a1a',
-                        primary: '#10b981', // Emerald green
-                        secondary: '#3b82f6', // Blue
-                        accent: '#8b5cf6', // Violet
-                    },
-                    animation: {
-                        'blob': 'blob 7s infinite',
-                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-                    },
-                    keyframes: {
-                        blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        },
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        }
+                        dark: '#0a0f1c',
+                        card: '#111827',
+                        primary: '#3b82f6',
+                        accent: '#60a5fa',
                     }
                 }
             }
         }
     </script>
     <style>
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #050505; }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #555; }
-        
-        /* Glassmorphism Utilities */
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
             backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        
-        .gradient-text {
-            background: linear-gradient(to right, #10b981, #3b82f6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Abstract Background patterns */
-        .bg-grid {
-            background-size: 40px 40px;
-            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
-<body class="bg-background text-gray-300 font-sans antialiased selection:bg-primary/30 selection:text-white relative overflow-x-hidden">
+<body class="bg-dark text-slate-300 font-sans antialiased selection:bg-primary selection:text-white">
 
-    <!-- Background Ambient Glows -->
-    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
-        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/10 blur-[120px] mix-blend-screen animate-blob"></div>
-        <div class="absolute top-[20%] right-[-10%] w-[40%] h-[40%] rounded-full bg-secondary/10 blur-[120px] mix-blend-screen animate-blob animation-delay-2000"></div>
-        <div class="absolute bottom-[-20%] left-[20%] w-[50%] h-[50%] rounded-full bg-accent/10 blur-[120px] mix-blend-screen animate-blob animation-delay-4000"></div>
-        <div class="absolute inset-0 bg-grid z-[-1]"></div>
-    </div>
-
-    <nav class="fixed w-full top-0 z-50 glass-panel border-b-0 border-white/5 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-dark/80 backdrop-blur-md border-b border-slate-800 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <div class="flex-shrink-0">
-                    <a href="#" class="font-mono text-xl font-bold tracking-tighter text-white">
-                        <span class="text-primary">&lt;</span>Rahul<span class="text-secondary">/&gt;</span>
-                    </a>
-                </div>
+                <span class="text-primary font-mono font-bold text-2xl tracking-tighter">&lt;Rahul.dev /&gt;</span>
                 <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#about" class="text-sm font-medium hover:text-primary transition-colors">About</a>
-                        <a href="#skills" class="text-sm font-medium hover:text-primary transition-colors">Skills</a>
-                        <a href="#projects" class="text-sm font-medium hover:text-primary transition-colors">Work</a>
-                        <a href="#achievements" class="text-sm font-medium hover:text-primary transition-colors">Achievements</a>
-                        <a href="#contact" class="px-5 py-2.5 rounded-lg border border-white/10 hover:border-primary/50 bg-white/5 hover:bg-primary/10 text-sm font-medium transition-all duration-300 backdrop-blur-md">
-                            Let's Talk
-                        </a>
+                    <div class="ml-10 flex items-center space-x-8 font-mono text-sm">
+                        <a href="#about" class="hover:text-accent transition-colors">01. About</a>
+                        <a href="#experience" class="hover:text-accent transition-colors">02. Experience</a>
+                        <a href="#projects" class="hover:text-accent transition-colors">03. Work</a>
+                        <a href="https://github.com/rahulpandey7218" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
+                        <a href="#contact" class="px-5 py-2.5 bg-primary/10 border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(59,130,246,0.3)]">Hire Me</a>
                     </div>
-                </div>
-                <!-- Mobile menu button (visual only for this demo) -->
-                <div class="md:hidden">
-                    <button class="text-gray-300 hover:text-white p-2">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <main class="pt-20">
-        <section id="about" class="min-h-screen flex items-center justify-center relative px-6 lg:px-8 pt-20 pb-32">
-            <div class="max-w-4xl mx-auto text-center relative z-10 animate-fade-in-up">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel text-xs font-mono text-primary mb-8">
-                    <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span> Available for freelance work
-                </div>
-                
-                <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6">
-                    Hi, I'm <span class="gradient-text">Rahul Pandey</span>
-                </h1>
-                
-                <h2 class="text-2xl md:text-4xl font-semibold text-gray-400 mb-8">
-                    Full Stack Developer & <span class="text-gray-200">AI Integrator</span>.
-                </h2>
-                
-                <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed mb-12">
-                    I build high-performance, scalable web applications and integrate cutting-edge Gen AI systems. 
-                    Based in Dehradun, currently pursuing my B.Tech CSE at Graphic Era Hill University (Class of '27).
-                    I help businesses automate workflows, manage risk, and build intelligent digital products.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-primary hover:bg-emerald-500 text-black font-semibold transition-all duration-300 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transform hover:-translate-y-1">
-                        Hire Me
-                    </a>
-                    <a href="#projects" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-panel text-white font-medium hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2">
-                        View Projects <i class="fas fa-arrow-right text-sm"></i>
-                    </a>
-                </div>
+    <!-- Hero Section -->
+    <section id="about" class="min-h-screen flex items-center pt-20 px-4 md:px-20 max-w-7xl mx-auto relative overflow-hidden">
+        <div class="absolute top-1/4 -right-20 w-96 h-96 bg-primary/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-1/4 -left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-4xl relative z-10">
+            <p class="text-primary font-mono mb-5 text-lg tracking-wide">Hi, I am</p>
+            <h1 class="text-6xl md:text-8xl font-extrabold text-white mb-4 tracking-tight">Rahul Pandey.</h1>
+            <h2 class="text-4xl md:text-6xl font-bold text-slate-400 mb-8 tracking-tight">I engineer scalable digital solutions.</h2>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-12 leading-relaxed">
+                I am a Full Stack Developer specializing in building high-performance web applications, intelligent automation systems, and secure database architectures. I help businesses transform complex logic into seamless digital products.
+            </p>
+            <div class="flex flex-wrap gap-5">
+                <a href="#contact" class="px-8 py-4 bg-primary text-white rounded-md font-mono font-semibold hover:bg-blue-600 transition-colors shadow-[0_0_20px_rgba(59,130,246,0.4)]">
+                    Start a Project
+                </a>
+                <a href="https://github.com/rahulpandey7218" target="_blank" class="px-8 py-4 bg-card border border-slate-700 text-slate-200 hover:border-slate-500 rounded-md transition-all flex items-center gap-3">
+                    <i class="fab fa-github text-xl"></i> View GitHub
+                </a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="skills" class="py-24 px-6 lg:px-8 relative">
-            <div class="max-w-6xl mx-auto">
-                <div class="flex items-center gap-4 mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">Technical Expertise</h2>
-                    <div class="h-px bg-gradient-to-r from-white/20 to-transparent flex-grow max-w-md"></div>
-                </div>
+    <!-- Capabilities & Experience Section -->
+    <section id="experience" class="py-32 px-4 md:px-20 max-w-7xl mx-auto">
+        <div class="flex items-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-white"><span class="text-primary font-mono text-2xl mr-3">02.</span> Professional Expertise</h2>
+            <div class="h-px bg-slate-800 flex-grow ml-8 max-w-md"></div>
+        </div>
 
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                    <!-- Skill Cards -->
-                    <div class="glass-panel p-6 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group cursor-default">
-                        <i class="fab fa-python text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"></i>
-                        <span class="font-mono text-sm font-medium">Python / C++</span>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-xl font-semibold text-slate-200 mb-6 font-mono">Core Technologies</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="glass-card p-4 rounded-lg flex items-center gap-4">
+                        <i class="fab fa-react text-2xl text-cyan-400"></i>
+                        <span class="font-medium text-slate-200">React.js & UI</span>
                     </div>
-                    
-                    <div class="glass-panel p-6 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 group cursor-default">
-                        <i class="fab fa-react text-4xl text-gray-400 group-hover:text-cyan-400 transition-colors"></i>
-                        <span class="font-mono text-sm font-medium">React.js</span>
+                    <div class="glass-card p-4 rounded-lg flex items-center gap-4">
+                        <i class="fab fa-python text-2xl text-blue-400"></i>
+                        <span class="font-medium text-slate-200">Python & C++</span>
                     </div>
-                    
-                    <div class="glass-panel p-6 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-green-500/50 hover:bg-green-500/5 transition-all duration-300 group cursor-default">
-                        <i class="fab fa-node-js text-4xl text-gray-400 group-hover:text-green-500 transition-colors"></i>
-                        <span class="font-mono text-sm font-medium">Node.js</span>
+                    <div class="glass-card p-4 rounded-lg flex items-center gap-4">
+                        <i class="fab fa-node-js text-2xl text-green-500"></i>
+                        <span class="font-medium text-slate-200">Node.js Backends</span>
                     </div>
-
-                    <div class="glass-panel p-6 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-blue-500/50 hover:bg-blue-500/5 transition-all duration-300 group cursor-default">
-                        <i class="fas fa-database text-4xl text-gray-400 group-hover:text-blue-500 transition-colors"></i>
-                        <span class="font-mono text-sm font-medium">PostgreSQL / MySQL</span>
-                    </div>
-
-                    <div class="glass-panel p-6 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300 group cursor-default">
-                        <i class="fas fa-brain text-4xl text-gray-400 group-hover:text-purple-400 transition-colors"></i>
-                        <span class="font-mono text-sm font-medium">Gen AI Integrations</span>
-                    </div>
-
-                    <div class="glass-panel p-6 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-yellow-500/50 hover:bg-yellow-500/5 transition-all duration-300 group cursor-default">
-                        <i class="fas fa-network-wired text-4xl text-gray-400 group-hover:text-yellow-500 transition-colors"></i>
-                        <span class="font-mono text-sm font-medium">System Design</span>
-                    </div>
-
-                    <div class="glass-panel p-6 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-orange-500/50 hover:bg-orange-500/5 transition-all duration-300 group cursor-default">
-                        <i class="fas fa-chart-line text-4xl text-gray-400 group-hover:text-orange-500 transition-colors"></i>
-                        <span class="font-mono text-sm font-medium">Data Analytics</span>
-                    </div>
-
-                    <div class="glass-panel p-6 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-rose-500/50 hover:bg-rose-500/5 transition-all duration-300 group cursor-default">
-                        <i class="fas fa-server text-4xl text-gray-400 group-hover:text-rose-500 transition-colors"></i>
-                        <span class="font-mono text-sm font-medium">Backend Architecture</span>
+                    <div class="glass-card p-4 rounded-lg flex items-center gap-4">
+                        <i class="fas fa-database text-2xl text-orange-400"></i>
+                        <span class="font-medium text-slate-200">SQL & PostgreSQL</span>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section id="projects" class="py-24 px-6 lg:px-8 bg-black/20">
-            <div class="max-w-6xl mx-auto">
-                <div class="flex items-center gap-4 mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">Featured Work</h2>
-                    <div class="h-px bg-gradient-to-r from-white/20 to-transparent flex-grow max-w-md"></div>
-                </div>
-
-                <div class="grid lg:grid-cols-2 gap-8">
-                    
-                    <!-- Project 1 -->
-                    <div class="glass-panel rounded-3xl overflow-hidden group hover:border-primary/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(16,185,129,0.2)] flex flex-col">
-                        <div class="h-48 bg-surface/50 border-b border-white/5 p-6 flex items-center justify-center relative overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            <i class="fas fa-database text-6xl text-gray-600 group-hover:text-primary transition-colors duration-500 transform group-hover:scale-110"></i>
-                        </div>
-                        <div class="p-8 flex flex-col flex-grow">
-                            <div class="flex justify-between items-start mb-4">
-                                <h3 class="text-2xl font-bold text-white group-hover:text-primary transition-colors">Gen AI Database Copilot</h3>
-                                <a href="#" class="text-gray-400 hover:text-white transition-colors" title="View Source"><i class="fab fa-github text-xl"></i></a>
-                            </div>
-                            <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
-                                A highly advanced full-stack application that acts as a translator between natural language and complex SQL queries. Engineered with built-in query security checks, real-time execution architecture, and intelligent schema awareness to prevent destructive operations.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mt-auto">
-                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-cyan-400">React.js</span>
-                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-blue-400">MySQL</span>
-                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-purple-400">Gemini AI</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div class="glass-panel rounded-3xl overflow-hidden group hover:border-secondary/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(59,130,246,0.2)] flex flex-col">
-                        <div class="h-48 bg-surface/50 border-b border-white/5 p-6 flex items-center justify-center relative overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            <i class="fas fa-shield-alt text-6xl text-gray-600 group-hover:text-secondary transition-colors duration-500 transform group-hover:scale-110"></i>
-                        </div>
-                        <div class="p-8 flex flex-col flex-grow">
-                            <div class="flex justify-between items-start mb-4">
-                                <h3 class="text-2xl font-bold text-white group-hover:text-secondary transition-colors">AI Risk Manager</h3>
-                                <a href="#" class="text-gray-400 hover:text-white transition-colors" title="View Source"><i class="fab fa-github text-xl"></i></a>
-                            </div>
-                            <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
-                                Developed a robust risk mitigation engine capable of real-time transaction risk scoring. Features include 3DS verification logic flows, deep data analytics, and interactive dashboards to monitor threat vectors instantly.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mt-auto">
-                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-yellow-400">Python</span>
-                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-emerald-400">Data Analytics</span>
-                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-gray-300">API Design</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="glass-panel rounded-3xl overflow-hidden group hover:border-rose-500/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(244,63,94,0.2)] flex flex-col">
-                        <div class="h-48 bg-surface/50 border-b border-white/5 p-6 flex items-center justify-center relative overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-br from-rose-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            <i class="fas fa-exclamation-triangle text-6xl text-gray-600 group-hover:text-rose-500 transition-colors duration-500 transform group-hover:scale-110"></i>
-                        </div>
-                        <div class="p-8 flex flex-col flex-grow">
-                            <div class="flex justify-between items-start mb-4">
-                                <h3 class="text-2xl font-bold text-white group-hover:text-rose-500 transition-colors">Fraud Management System</h3>
-                                <a href="#" class="text-gray-400 hover:text-white transition-colors" title="View Source"><i class="fab fa-github text-xl"></i></a>
-                            </div>
-                            <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
-                                Architected a scalable backend infrastructure focusing on financial security. Built a rule-based alert engine and automated transaction checking systems operating on heavily optimized relational database schemas for low-latency responses.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mt-auto">
-                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-yellow-400">Python</span>
-                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-blue-400">MySQL</span>
-                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-orange-400">DB Optimization</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 4 -->
-                    <div class="glass-panel rounded-3xl overflow-hidden group hover:border-accent/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(139,92,246,0.2)] flex flex-col">
-                        <div class="h-48 bg-surface/50 border-b border-white/5 p-6 flex items-center justify-center relative overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            <i class="fas fa-chess-board text-6xl text-gray-600 group-hover:text-accent transition-colors duration-500 transform group-hover:scale-110"></i>
-                        </div>
-                        <div class="p-8 flex flex-col flex-grow">
-                            <div class="flex justify-between items-start mb-4">
-                                <h3 class="text-2xl font-bold text-white group-hover:text-accent transition-colors">AI Checkers Master</h3>
-                                <a href="#" class="text-gray-400 hover:text-white transition-colors" title="View Source"><i class="fab fa-github text-xl"></i></a>
-                            </div>
-                            <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
-                                Programmed an intelligent game engine capable of competitive play. The core leverages advanced Monte Carlo Tree Search (MCTS) simulations to calculate real-time win probabilities and execute optimal strategic moves.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mt-auto">
-                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-yellow-400">Python</span>
-                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-pink-400">Monte Carlo Logic</span>
-                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-gray-300">Algorithms</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="achievements" class="py-24 px-6 lg:px-8 relative">
-            <div class="max-w-4xl mx-auto">
-                <div class="flex items-center gap-4 mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">Achievements</h2>
-                    <div class="h-px bg-gradient-to-r from-white/20 to-transparent flex-grow max-w-md"></div>
-                </div>
-
+            <div>
+                <h3 class="text-xl font-semibold text-slate-200 mb-6 font-mono">Track Record</h3>
                 <div class="space-y-6">
-                    <!-- Achievement 1 -->
-                    <div class="glass-panel p-6 rounded-2xl flex items-start gap-4 hover:bg-white/[0.05] transition-colors">
-                        <div class="p-3 rounded-lg bg-yellow-500/10 text-yellow-500 border border-yellow-500/20 mt-1">
-                            <i class="fas fa-trophy text-xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-1">Goldman Sachs India Hackathon</h3>
-                            <p class="text-gray-400 text-sm">Competed against top engineering talent nationwide to solve complex fintech algorithmic challenges.</p>
-                        </div>
+                    <div class="border-l-2 border-primary pl-6 py-1">
+                        <h4 class="text-lg font-bold text-slate-100">AI Fellowship & Analysis</h4>
+                        <p class="text-sm text-slate-400 font-mono mt-1 mb-2">Handshake AI • Bluestock Fintech</p>
+                        <p class="text-slate-400 text-sm leading-relaxed">Engineered AI prompts and retrieved complex search datasets. Executed remote data analytics and processing pipelines.</p>
                     </div>
-
-                    <!-- Achievement 2 -->
-                    <div class="glass-panel p-6 rounded-2xl flex items-start gap-4 hover:bg-white/[0.05] transition-colors">
-                        <div class="p-3 rounded-lg bg-blue-500/10 text-blue-500 border border-blue-500/20 mt-1">
-                            <i class="fas fa-medal text-xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-1">ET AI Hackathon 2.0 <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full ml-2 align-middle">Phase 2 Shortlist</span></h3>
-                            <p class="text-gray-400 text-sm">Successfully advanced to Phase 2 by prototyping an innovative AI-driven solution for real-world enterprise problems.</p>
-                        </div>
+                    <div class="border-l-2 border-slate-700 pl-6 py-1 hover:border-primary transition-colors">
+                        <h4 class="text-lg font-bold text-slate-100">Elite Hackathon Challenger</h4>
+                        <p class="text-sm text-slate-400 font-mono mt-1 mb-2">Goldman Sachs • ET AI Hackathon • SAP Hackfest</p>
+                        <p class="text-slate-400 text-sm leading-relaxed">Consistently shortlisted and qualified for rigorous algorithmic, system design, and AI-build sprints against top national talent.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <!-- Achievement 3 -->
-                    <div class="glass-panel p-6 rounded-2xl flex items-start gap-4 hover:bg-white/[0.05] transition-colors">
-                        <div class="p-3 rounded-lg bg-accent/10 text-accent border border-accent/20 mt-1">
-                            <i class="fas fa-certificate text-xl"></i>
+    <!-- NEW INTERACTIVE IMAGE HOVER PROJECTS SECTION -->
+    <section id="projects" class="py-32 px-4 md:px-20 max-w-7xl mx-auto">
+        <div class="flex items-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-white"><span class="text-primary font-mono text-2xl mr-3">03.</span> Featured Work</h2>
+            <div class="h-px bg-slate-800 flex-grow ml-8 max-w-md"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            
+            <!-- Project 1 -->
+            <div class="relative overflow-hidden rounded-xl group h-80 border border-slate-700 bg-card cursor-pointer shadow-lg">
+                <!-- Background Image -->
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Code" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50 group-hover:opacity-10 z-0">
+                <!-- Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/70 to-transparent z-10 transition-colors duration-500 group-hover:from-dark group-hover:via-dark/95"></div>
+
+                <div class="absolute inset-0 p-8 flex flex-col justify-end z-20 overflow-hidden">
+                    <!-- Title (Translates up on hover) -->
+                    <div class="transform translate-y-24 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fas fa-database text-primary text-2xl"></i>
+                            <h3 class="text-3xl font-bold text-white">Gen AI DB Copilot</h3>
                         </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-1">Project Seal (Handshake AI)</h3>
-                            <p class="text-gray-400 text-sm">Selected for and participated in building robust, AI-powered communication solutions demonstrating strong technical aptitude.</p>
+
+                        <!-- Description & Tech Stack (Fades in on hover) -->
+                        <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 mt-4">
+                            <p class="text-slate-300 mb-6 text-sm leading-relaxed">
+                                A full-stack business tool that seamlessly translates natural language into highly optimized SQL queries. Features built-in query security checks and real-time database execution architecture.
+                            </p>
+                            <div class="flex justify-between items-center border-t border-slate-700/50 pt-4">
+                                <ul class="flex flex-wrap gap-2 font-mono text-xs text-primary/90">
+                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">React.js</li>
+                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">MySQL</li>
+                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">Gemini AI</li>
+                                </ul>
+                                <a href="https://github.com/rahulpandey7218" target="_blank" class="text-slate-400 hover:text-white transition-colors ml-4"><i class="fab fa-github text-2xl"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section id="contact" class="py-24 px-6 lg:px-8 bg-black/40 relative">
-            <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16">
-                
-                <div class="lg:w-1/2 flex flex-col justify-center">
-                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Let's build something <span class="text-primary">extraordinary.</span></h2>
-                    <p class="text-gray-400 text-lg mb-10 leading-relaxed">
-                        I am currently accepting new freelance clients. Whether you need a full-stack application, an AI integration, or backend optimization, let's discuss how I can help bring your vision to life.
-                    </p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-primary">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm text-gray-500">Email Me</p>
-                                <a href="mailto:contact@rahulpandey.com" class="text-white hover:text-primary transition-colors font-medium">contact@rahulpandey.com</a>
-                            </div>
+            <!-- Project 2 -->
+            <div class="relative overflow-hidden rounded-xl group h-80 border border-slate-700 bg-card cursor-pointer shadow-lg">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Analytics Dashboard" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50 group-hover:opacity-10 z-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/70 to-transparent z-10 transition-colors duration-500 group-hover:from-dark group-hover:via-dark/95"></div>
+
+                <div class="absolute inset-0 p-8 flex flex-col justify-end z-20 overflow-hidden">
+                    <div class="transform translate-y-24 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fas fa-shield-alt text-primary text-2xl"></i>
+                            <h3 class="text-3xl font-bold text-white">AI Risk Manager</h3>
                         </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-primary">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm text-gray-500">Location</p>
-                                <p class="text-white font-medium">Dehradun, Uttarakhand, India</p>
+
+                        <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 mt-4">
+                            <p class="text-slate-300 mb-6 text-sm leading-relaxed">
+                                Developed for the Razorpay AI Builder challenge. Implements real-time transaction risk scoring pipelines, interactive analytics dashboards, and complex 3DS verification logic.
+                            </p>
+                            <div class="flex justify-between items-center border-t border-slate-700/50 pt-4">
+                                <ul class="flex flex-wrap gap-2 font-mono text-xs text-primary/90">
+                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">Python</li>
+                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">Analytics</li>
+                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">API Design</li>
+                                </ul>
+                                <a href="https://github.com/rahulpandey7218" target="_blank" class="text-slate-400 hover:text-white transition-colors ml-4"><i class="fab fa-github text-2xl"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Contact Form (UI only for preview, requires form submission provider like Formspree in production) -->
-                <div class="lg:w-1/2">
-                    <form class="glass-panel p-8 rounded-3xl" onsubmit="event.preventDefault(); alert('Message feature requires a backend integration like Formspree. Replace this with your form endpoint!');">
-                        <div class="space-y-6">
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Name</label>
-                                <input type="text" id="name" class="w-full bg-surface/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all" placeholder="John Doe" required>
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-400 mb-2">Email</label>
-                                <input type="email" id="email" class="w-full bg-surface/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all" placeholder="john@example.com" required>
-                            </div>
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-gray-400 mb-2">Project Details</label>
-                                <textarea id="message" rows="4" class="w-full bg-surface/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all resize-none" placeholder="Tell me about your project..." required></textarea>
-                            </div>
-                            <button type="submit" class="w-full py-4 rounded-xl bg-primary hover:bg-emerald-500 text-black font-bold transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-primary/20">
-                                Send Message
-                            </button>
+            <!-- Project 3 -->
+            <div class="relative overflow-hidden rounded-xl group h-80 border border-slate-700 bg-card cursor-pointer shadow-lg">
+                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cybersecurity" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50 group-hover:opacity-10 z-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/70 to-transparent z-10 transition-colors duration-500 group-hover:from-dark group-hover:via-dark/95"></div>
+
+                <div class="absolute inset-0 p-8 flex flex-col justify-end z-20 overflow-hidden">
+                    <div class="transform translate-y-24 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fas fa-search-dollar text-primary text-2xl"></i>
+                            <h3 class="text-3xl font-bold text-white">Fraud Management</h3>
                         </div>
-                    </form>
+
+                        <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 mt-4">
+                            <p class="text-slate-300 mb-6 text-sm leading-relaxed">
+                                A robust backend infrastructure featuring a custom rule-based alert engine and automated transaction screening. Built on heavily optimized, normalized relational schemas.
+                            </p>
+                            <div class="flex justify-between items-center border-t border-slate-700/50 pt-4">
+                                <ul class="flex flex-wrap gap-2 font-mono text-xs text-primary/90">
+                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">Python</li>
+                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">MySQL</li>
+                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">Schema</li>
+                                </ul>
+                                <a href="https://github.com/rahulpandey7218" target="_blank" class="text-slate-400 hover:text-white transition-colors ml-4"><i class="fab fa-github text-2xl"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
 
-    <!-- Footer -->
-    <footer class="border-t border-white/5 py-8 text-center bg-background z-10 relative">
-        <div class="flex justify-center gap-6 mb-6">
-            <a href="#" class="w-10 h-10 rounded-full glass-panel flex items-center justify-center text-gray-400 hover:text-white hover:border-white/30 transition-all">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="#" class="w-10 h-10 rounded-full glass-panel flex items-center justify-center text-gray-400 hover:text-[#0a66c2] hover:border-[#0a66c2]/50 transition-all">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="#" class="w-10 h-10 rounded-full glass-panel flex items-center justify-center text-gray-400 hover:text-[#1da1f2] hover:border-[#1da1f2]/50 transition-all">
-                <i class="fab fa-twitter"></i>
+            <!-- Project 4 -->
+            <div class="relative overflow-hidden rounded-xl group h-80 border border-slate-700 bg-card cursor-pointer shadow-lg">
+                <img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Chess AI" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-50 group-hover:opacity-10 z-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/70 to-transparent z-10 transition-colors duration-500 group-hover:from-dark group-hover:via-dark/95"></div>
+
+                <div class="absolute inset-0 p-8 flex flex-col justify-end z-20 overflow-hidden">
+                    <div class="transform translate-y-24 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fas fa-chess-board text-primary text-2xl"></i>
+                            <h3 class="text-3xl font-bold text-white">AI Checkers Engine</h3>
+                        </div>
+
+                        <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 mt-4">
+                            <p class="text-slate-300 mb-6 text-sm leading-relaxed">
+                                Engineered an advanced decision-making engine using Monte Carlo simulation algorithms to calculate real-time win probabilities across multiple difficulties.
+                            </p>
+                            <div class="flex justify-between items-center border-t border-slate-700/50 pt-4">
+                                <ul class="flex flex-wrap gap-2 font-mono text-xs text-primary/90">
+                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">Python</li>
+                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">Pygame</li>
+                                    <li class="bg-primary/20 px-2 py-1 rounded backdrop-blur-sm">Monte Carlo</li>
+                                </ul>
+                                <a href="https://github.com/rahulpandey7218" target="_blank" class="text-slate-400 hover:text-white transition-colors ml-4"><i class="fab fa-github text-2xl"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 px-4 text-center max-w-3xl mx-auto relative">
+        <div class="absolute inset-0 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="relative z-10">
+            <p class="text-primary font-mono mb-4 text-lg">04. What's Next?</p>
+            <h2 class="text-5xl md:text-6xl font-bold text-white mb-8 tracking-tight">Let's Build Together</h2>
+            <p class="text-slate-400 mb-12 text-lg md:text-xl leading-relaxed">
+                I am actively taking on freelance web development, database design, and automation projects. Whether you need a full-stack application built from scratch or a script to automate your business, my inbox is open.
+            </p>
+            
+            <a href="mailto:your.professional.email@gmail.com" class="px-10 py-5 bg-primary/10 border border-primary text-primary hover:bg-primary hover:text-white rounded-md font-mono text-lg transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] inline-block">
+                Send me an Email
             </a>
         </div>
-        <p class="text-gray-500 text-sm">
-            © 2026 Rahul Pandey. Crafted with code in Dehradun.
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center border-t border-slate-800 bg-dark mt-12">
+        <div class="flex justify-center gap-6 mb-4">
+            <a href="https://github.com/rahulpandey7218" target="_blank" class="text-slate-400 hover:text-primary transition-colors text-xl"><i class="fab fa-github"></i></a>
+        </div>
+        <p class="font-mono text-sm text-slate-500">
+            Designed & Built by Rahul Pandey <br>
+            B.Tech CSE '27
         </p>
     </footer>
 
